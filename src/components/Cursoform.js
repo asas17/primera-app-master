@@ -18,13 +18,14 @@ export default function Cursoform(props) {
   return(
   <form onSubmit={agregarCursoHandler} >
       <input type='text' 
+      id='id'
       placeholder='Ingrese un nuevo curso' 
       onChange={textoIngresadoHalder}
       value={texto}
       />
-      <button>
+      {/*<button>
           Agregar Curso
-      </button>
+      </button>*/}
   </form> 
   );
 }

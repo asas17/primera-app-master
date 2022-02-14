@@ -3,6 +3,10 @@ import Cursoform from './Cursoform';
 
 
 export default function Cursos({cursos, onEliminarCursos}) {
+    const recibir=()=>{
+        var rec = document.getElementById("id").value;
+        document.getElementById("escribir").innerHTML= "EL curso nuevo es :"+rec+""
+    }
     const eliminarCursoHandler = (id) =>{
         console.log("Eliminando curso...", id);
         onEliminarCursos(id);
@@ -14,6 +18,11 @@ export default function Cursos({cursos, onEliminarCursos}) {
       </h2>
       <hr/>
             <Cursoform/>
+            <div id='escribir'>
+                <button onClick={recibir}>
+                    Agregar
+                </button>
+            </div>
         <hr/>
       <ul>  
           {
